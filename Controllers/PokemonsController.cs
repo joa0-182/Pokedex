@@ -174,7 +174,7 @@ namespace Pokedex.Controllers
 
         private bool PokemonsExists(uint id)
         {
-          return (_context.Pokemons?.Any(e => e.Number == id)).GetValueOrDefault();
+          return _context.Pokemons.Any(e => e.Number == id);
         }
     }
 }

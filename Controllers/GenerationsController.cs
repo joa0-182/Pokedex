@@ -22,9 +22,7 @@ namespace Pokedex.Controllers
         // GET: Generations
         public async Task<IActionResult> Index()
         {
-              return _context.Generations != null ? 
-                          View(await _context.Generations.ToListAsync()) :
-                          Problem("Entity set 'ApplicationDbContext.Generations'  is null.");
+              return View(await _context.Generations.ToListAsync());
         }
 
         // GET: Generations/Details/5
@@ -157,7 +155,7 @@ namespace Pokedex.Controllers
 
         private bool GenerationExists(uint id)
         {
-          return (_context.Generations?.Any(e => e.Id == id)).GetValueOrDefault();
+          return _context.Generations.Any(e => e.Id == id);
         }
     }
 }

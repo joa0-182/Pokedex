@@ -22,9 +22,7 @@ namespace Pokedex.Controllers
         // GET: Abilities
         public async Task<IActionResult> Index()
         {
-              return _context.Abilities != null ? 
-                          View(await _context.Abilities.ToListAsync()) :
-                          Problem("Entity set 'ApplicationDbContext.Abilities'  is null.");
+              return View(await _context.Abilities.ToListAsync());
         }
 
         // GET: Abilities/Details/5
@@ -157,7 +155,7 @@ namespace Pokedex.Controllers
 
         private bool AbilitiesExists(uint id)
         {
-          return (_context.Abilities?.Any(e => e.Id == id)).GetValueOrDefault();
+          return _context.Abilities.Any(e => e.Id == id);
         }
     }
 }

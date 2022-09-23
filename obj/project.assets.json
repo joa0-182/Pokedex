@@ -9500,11 +9500,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\etec\\Desktop\\Pokedex\\Pokedex.csproj",
+      "projectUniqueName": "C:\\Users\\etec\\Documents\\Pokedex\\Pokedex.csproj",
       "projectName": "Pokedex",
-      "projectPath": "C:\\Users\\etec\\Desktop\\Pokedex\\Pokedex.csproj",
+      "projectPath": "C:\\Users\\etec\\Documents\\Pokedex\\Pokedex.csproj",
       "packagesPath": "C:\\Users\\etec\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\etec\\Desktop\\Pokedex\\obj\\",
+      "outputPath": "C:\\Users\\etec\\Documents\\Pokedex\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\etec\\AppData\\Roaming\\NuGet\\NuGet.Config",

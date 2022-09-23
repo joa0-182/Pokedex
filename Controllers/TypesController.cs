@@ -22,9 +22,7 @@ namespace Pokedex.Controllers
         // GET: Types
         public async Task<IActionResult> Index()
         {
-              return _context.Types != null ? 
-                          View(await _context.Types.ToListAsync()) :
-                          Problem("Entity set 'ApplicationDbContext.Types'  is null.");
+              return View(await _context.Types.ToListAsync());
         }
 
         // GET: Types/Details/5
@@ -157,7 +155,7 @@ namespace Pokedex.Controllers
 
         private bool TypesExists(uint id)
         {
-          return (_context.Types?.Any(e => e.Id == id)).GetValueOrDefault();
+          return _context.Types.Any(e => e.Id == id);
         }
     }
 }

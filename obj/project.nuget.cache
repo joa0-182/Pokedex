@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "GSSfKzi4NFTCG3vIjJQOuPEjOmo1pbOnwu7EnYiIECDzW5hGF3eZz7cf3H/D/zdNVHoYGcRIRypcU0bXswTDEA==",
+  "dgSpecHash": "vz3AipLvn5vdD8fqcXz5EpCsyD2k4dJWHLtiDLfB9AlfU0BiIyLqvWJcHbcgiplIuEOD0bOb6/ZNlXL/YmBEYg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\etec\\Desktop\\Pokedex\\Pokedex.csproj",
+  "projectFilePath": "C:\\Users\\etec\\Documents\\Pokedex\\Pokedex.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\etec\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\etec\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",

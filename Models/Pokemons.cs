@@ -15,7 +15,7 @@ namespace Pokedex.Models
         public uint? EvolvedFrom { get; set; }
         [ForeignKey("EvolvedFrom")]
         [Display(Name = "Pokemon Base")]
-        public Pokemons? PokemonBase { get; set; }
+        public Pokemons PokemonBase { get; set; }
 
         [Display(Name = "Geração")]
         [Required(ErrorMessage = "Por favor, informe a Geração")]
@@ -36,7 +36,7 @@ namespace Pokedex.Models
 
         [Display(Name = "Descrição")]
         [StringLength(1000, ErrorMessage = "A Descrição deve possuir no máximo 1000 caracteres")]
-        public string? Description { get; set; }
+        public string Description { get; set; }
 
         [Display(Name = "Altura")]
         [Required(ErrorMessage = "Por favor, informe a Altura")]
@@ -50,15 +50,15 @@ namespace Pokedex.Models
 
         [Display(Name = "Imagem")]
         [StringLength(200)]
-        public string? Image { get; set; }
+        public string Image { get; set; }
 
         [Display(Name = "Imagem")]
         [StringLength(200)]
-        public string? AnimatedImg { get; set; }
+        public string AnimatedImg { get; set; }
 
-        public ICollection<PokemonAbilities> Abilities { get; set; } = new List<PokemonAbilities>();
-        public ICollection<PokemonTypes> Types { get; set; } = new List<PokemonTypes>();
-        public ICollection<Weaknesses> Weaknesses { get; set; } = new List<Weaknesses>();
+        public ICollection<PokemonAbilities> Abilities { get; set; } 
+        public ICollection<PokemonTypes> Types { get; set; } 
+        public ICollection<Weaknesses> Weaknesses { get; set; } 
     }
 }
 
