@@ -1,8 +1,11 @@
-namespace Pokedex.Models;
+using System;
 
-public class ErrorViewModel
+namespace Pokedex.Models
 {
-    public string RequestId { get; set; }
+    public class ErrorViewModel
+    {
+        public string RequestId { get; set; } = string.Empty;
 
-    public bool ShowRequestId => !string.IsNullOrEmpty(RequestId);
+        public bool ShowRequestId => !string.IsNullOrEmpty(RequestId);
+    }
 }

@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Pokedex.Data;
 using Pokedex.Models;
+using Pokedex.ViewModels;
 
 namespace Pokedex.Controllers
 {
@@ -20,10 +21,19 @@ namespace Pokedex.Controllers
         }
 
         // GET: Types
-        public async Task<IActionResult> Index()
+        public IActionResult Index(int pg = 1)
         {
-              return View(await _context.Types.ToListAsync());
+            const int pageSize = 10;
+            pg = pg < 1 ? 1 : pg;
+            int recCount = _context.Types.Count();
+            var pager = new Pager(recCount, pg, pageSize);
+            int recSkip = (pg -1) * pageSize;
+            var data = _context.Types.Skip(recSkip).Take(pageSize).ToList();
+            
+            ViewData["Pager"] = pager;
+            return View(data);
         }
+      
 
         // GET: Types/Details/5
         public async Task<IActionResult> Details(uint? id)
@@ -155,7 +165,7 @@ namespace Pokedex.Controllers
 
         private bool TypesExists(uint id)
         {
-          return _context.Types.Any(e => e.Id == id);
+          return (_context.Types?.Any(e => e.Id == id)).GetValueOrDefault();
         }
     }
 }

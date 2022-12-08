@@ -22,7 +22,9 @@ namespace Pokedex.Controllers
         // GET: Genders
         public async Task<IActionResult> Index()
         {
-              return View(await _context.Genders.ToListAsync());
+              return _context.Genders != null ? 
+                          View(await _context.Genders.ToListAsync()) :
+                          Problem("Entity set 'ApplicationDbContext.Genders'  is null.");
         }
 
         // GET: Genders/Details/5
@@ -155,7 +157,7 @@ namespace Pokedex.Controllers
 
         private bool GenderExists(uint id)
         {
-          return _context.Genders.Any(e => e.Id == id);
+          return (_context.Genders?.Any(e => e.Id == id)).GetValueOrDefault();
         }
     }
 }

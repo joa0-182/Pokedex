@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\etec\\Documents\\Pokedex\\Pokedex.csproj": {}
+    "R:\\Ens Tecnico\\DESENVOLVIMENTO DE SISTEMAS\\2 Modulo\\Programação Web II\\Pokedex\\Pokedex.csproj": {}
   },
   "projects": {
-    "C:\\Users\\etec\\Documents\\Pokedex\\Pokedex.csproj": {
+    "R:\\Ens Tecnico\\DESENVOLVIMENTO DE SISTEMAS\\2 Modulo\\Programação Web II\\Pokedex\\Pokedex.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\etec\\Documents\\Pokedex\\Pokedex.csproj",
+        "projectUniqueName": "R:\\Ens Tecnico\\DESENVOLVIMENTO DE SISTEMAS\\2 Modulo\\Programação Web II\\Pokedex\\Pokedex.csproj",
         "projectName": "Pokedex",
-        "projectPath": "C:\\Users\\etec\\Documents\\Pokedex\\Pokedex.csproj",
-        "packagesPath": "C:\\Users\\etec\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\etec\\Documents\\Pokedex\\obj\\",
+        "projectPath": "R:\\Ens Tecnico\\DESENVOLVIMENTO DE SISTEMAS\\2 Modulo\\Programação Web II\\Pokedex\\Pokedex.csproj",
+        "packagesPath": "C:\\Users\\jose.gallo\\.nuget\\packages\\",
+        "outputPath": "R:\\Ens Tecnico\\DESENVOLVIMENTO DE SISTEMAS\\2 Modulo\\Programação Web II\\Pokedex\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\etec\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\jose.gallo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

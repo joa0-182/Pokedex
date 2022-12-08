@@ -173,3 +173,17 @@ table svg {
 .w-70 {
   width: 70%!important;
 }
+
+.page-link {
+  color: red !important;
+}
+
+.page-item.active .page-link{
+  color: white !important;
+  background-color: #dc3545;
+  border-color: #911a03;
+}
+
+.page-item.disabled .page-link{
+  color: rgb(219, 207, 207) !important;
+}

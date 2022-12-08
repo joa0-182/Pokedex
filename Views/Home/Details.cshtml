@@ -1,4 +1,4 @@
-@model Pokedex.ViewModels.Details
+@model Pokedex.ViewModels.DetailsVM
 @{
     ViewData["Title"] = "Pokemon";
 }
@@ -8,9 +8,9 @@
         <div class="col text-center">
             @if (Model.Prior != null)
             {
-            <a asp-action="Details" asp-route-number="@Model.Prior.Number" class="btn btn-lg btn-outline-dark">
-				@Model.Prior.Number.ToString("000") - @Model.Prior.Name
-			</a>
+                <a asp-action="Details" asp-route-number="@Model.Prior.Number" class="btn btn-lg btn-outline-dark">
+                    @Model.Prior.Number.ToString("000") - @Model.Prior.Name
+                </a>
             }
         </div>
         <div class="col text-center">
@@ -19,20 +19,20 @@
         <div class="col text-center">
             @if (Model.Next != null)
             {
-            <a asp-action="Details" asp-route-number="@Model.Next.Number" class="btn btn-lg btn-outline-dark">
-				@Model.Next.Number.ToString("000") - @Model.Next.Name
-			</a>
+                <a asp-action="Details" asp-route-number="@Model.Next.Number" class="btn btn-lg btn-outline-dark">
+                    @Model.Next.Number.ToString("000") - @Model.Next.Name
+                </a>
             }
-
         </div>
     </div>
-   
+
     <div class="row mt-3">
         <div class="col-lg-5 p-0">
-            <img class="img-fluid cursor-pointer" src="@Model.Current.Image" alt="@Model.Current.Name" data-bs-toggle="modal" data-bs-target="#modalGif">
+            <img data-bs-toggle="modal" data-bs-target="#modalGif"
+                class="img-fluid cursor-pointer" src="@Model.Current.Image" alt="@Model.Current.Name">
         </div>
         <div class="col-lg-7 fs-5 mt-4">
-            <p class="mt-4 mb-3"><strong>Descrição:</strong> @Model.Current.Description</p>
+            <p class="mb-3"><strong>Descrição:</strong> @Model.Current.Description</p>
             <p class="mb-3"><strong>Região:</strong> @Model.Current.Generation.Name</p>
             <p class="mb-3"><strong>Gênero:</strong> @Model.Current.Gender.Name</p>
             <p class="mb-3"><strong>Altura:</strong> @Model.Current.Height mts</p>
@@ -41,13 +41,11 @@
             <div class="btn-group">
                 @foreach (var ptype in Model.Current.Types)
                 {
-                    <a href="#" class="btn btn-lg my-2 text-white"
-                        style="background-color:@ptype.Type.Color">
-                        @ptype.Type.Name
-                    </a>
+                    <a asp-action="Index" asp-route-type="@ptype.Type.Name.ToLower()" class="btn btn-lg mx-1 text-white" style="background-color:@ptype.Type.Color">@ptype.Type.Name</a>
                 }
             </div>
         </div>
+    </div>
     </div>
 </section>
 

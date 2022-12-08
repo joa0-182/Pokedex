@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -15,6 +14,7 @@ namespace Pokedex.Models
         [Key, Column(Order = 2)]
         public uint TypeId { get; set; }
         [ForeignKey("TypeId")]
-        public Types Type { get; set; }
+        public Types Type { get; set; } 
     }
 }
+
